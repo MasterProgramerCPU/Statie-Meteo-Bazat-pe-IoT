@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictions</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-container">
+        <h1>Predicții</h1>
+    </div>
+    <nav>
+        <button id="liveDataBtn" onclick="window.location.href='/'">Date Currente</button>
+        <button id="graphsBtn" onclick="window.location.href='/graphs/'">Grafice</button>
+        <button id="predictionsBtn" onclick="window.location.href='/predictions/'">Predictii</button>
+        <button id="tableBtn" onclick="window.location.href='/table/'">Data Table</button>
+    </nav>
+    <main>
+        <div id="predictions-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Timp</th>
+                        <th>Temperatura</th>
+                        <th>Presiune</th>
+                        <th>Ceață</th>
+                        <th>Vânt</th>
+                        <th>Umiditate</th>
+                        <th>Lumina</th>
+                    </tr>
+                </thead>
+                <tbody id="predictions-table-body">
+                    <!-- Data rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="/static/js/navigation.js"></script>
+    <script src="/static/js/predictions.js"></script>
+</body>
+</html>

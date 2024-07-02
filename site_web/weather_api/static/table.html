@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Table</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header-container">
+        <h1>Tabel Date</h1>
+    </div>
+    <nav>
+        <button id="liveDataBtn" onclick="window.location.href='/'">Date Curente</button>
+        <button id="graphsBtn" onclick="window.location.href='/graphs/'">Grafice</button>
+        <button id="predictionsBtn" onclick="window.location.href='/predictions/'">Predicții</button>
+        <button id="tableBtn" onclick="window.location.href='/table/'">Tabel Date</button>
+    </nav>
+    <main>
+        <div id="table-container">
+            <!-- Table will be inserted here by JavaScript -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Temperatură</th>
+                        <th>Presiune</th>
+                        <th>Umiditate</th>
+                        <th>Lumină</th>
+                        <th>Ceață</th>
+                        <th>Viteza Vântului</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <!-- Data rows will be inserted here -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="/static/js/navigation.js"></script>
+    <script src="/static/js/table_data.js"></script>
+</body>
+</html>

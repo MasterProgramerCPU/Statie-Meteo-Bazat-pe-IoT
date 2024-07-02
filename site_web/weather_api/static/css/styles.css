@@ -1,0 +1,201 @@
+/* Import Ubuntu font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+/* Reset some default browser styles */
+body, h1, button, nav, main, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Ubuntu', sans-serif; /* Use Ubuntu font for all text */
+    background-color: #1e1e1e; /* Dark background */
+    color: #e1e1e1; /* Light text */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Title container styling with animated GIF background */
+.header-container {
+    background-image: url('/static/images/stars.gif'); /* Path to your GIF file */
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    color: #ffffff; /* White color for the title text */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Text shadow */
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Navigation bar styling */
+nav {
+    background-color: #333; /* Darker background for the nav bar */
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+nav button {
+    background-color: #a32cc4; /* Purple background for buttons */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif; /* Use Ubuntu font for buttons */
+    margin: 0 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+nav button:hover {
+    background-color: #7d1c9a; /* Darker purple on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Container for main content */
+main {
+    background-color: #282828; /* Slightly lighter dark background for content */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif; /* Use Ubuntu font for main content */
+    margin: auto;
+}
+
+/* Live data container styling */
+#live-data-container {
+    background-color: #333; /* Dark background for the data container */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#live-data-container p {
+    font-size: 1.2em; /* Larger font size for data text */
+    margin: 10px 0;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #333; /* Dark background for table */
+    color: #e1e1e1; /* Light text */
+}
+
+table th, table td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444; /* Dark border */
+}
+
+table th {
+    background-color: #444; /* Darker background for headers */
+}
+
+table tr:nth-child(even) {
+    background-color: #3a3a3a; /* Slightly lighter background for even rows */
+}
+
+table tr:hover {
+    background-color: #555; /* Highlight background on hover */
+}
+
+/* Predictions container styling */
+#predictions-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #333; /* Dark background for table */
+    color: #e1e1e1; /* Light text */
+}
+
+#predictions-container th, #predictions-container td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444; /* Dark border */
+}
+
+#predictions-container th {
+    background-color: #444; /* Darker background for headers */
+}
+
+#predictions-container tr:nth-child(even) {
+    background-color: #3a3a3a; /* Slightly lighter background for even rows */
+}
+
+#predictions-container tr:hover {
+    background-color: #555; /* Highlight background on hover */
+}
+
+/* Tooltip Styling */
+.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav button {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    main {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* Specific styling for the live data page */
+.live-data-main {
+    padding-top: 0;
+}
+
+.live-data-main #live-data-container {
+    margin-top: 0; /* Remove any top margin */
+}
